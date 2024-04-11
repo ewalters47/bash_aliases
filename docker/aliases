@@ -1,0 +1,6 @@
+# Better version of 'docker ps' - keep everything on one line
+alias dpss='docker ps -a |  grep -v Exited | cut -c1-$COLUMNS ' 
+# Stop all running containers
+alias dcstop='docker stop $(docker ps -a -q)'
+# Remove all containers
+alias dcremove='docker rm $(docker ps -a -q)'
