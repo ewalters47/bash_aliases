@@ -4,3 +4,7 @@ alias dpss='docker ps -a |  grep -v Exited | cut -c1-$COLUMNS '
 alias dcstop='docker stop $(docker ps -a -q)'
 # Remove all containers
 alias dcremove='docker rm $(docker ps -a -q)'
+# Display all docker networks
+alias dcnet='docker network ls'
+# Display all docker images
+alias dci='docker image ls'
